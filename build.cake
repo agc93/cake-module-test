@@ -15,7 +15,7 @@ Setup(ctx =>
 	Information("Running tasks...");
 	var files = GetFiles("./tools/**");
 	foreach(var file in files) {
-		Information(file);
+		Information(file.FullPath);
 	}
 });
 
