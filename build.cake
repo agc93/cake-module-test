@@ -13,10 +13,6 @@ Setup(ctx =>
 {
 	// Executed BEFORE the first task.
 	Information("Running tasks...");
-	var files = GetFiles("./**");
-	foreach(var file in files) {
-		Information(file.FullPath);
-	}
 });
 
 Teardown(ctx =>
@@ -49,7 +45,10 @@ Task("Default")
 .IsDependentOn("2")
 .IsDependentOn("10")
 .Does(() => {
-	Information("Hello Cake!");
+	var files = GetFiles("./**");
+	foreach(var file in files) {
+		Information(file.FullPath);
+	}
 });
 
 RunTarget(target);
