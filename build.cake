@@ -31,7 +31,7 @@ Task("Task A")
 });
 
 Task("Task B")
-.IsDependentOn("5")
+.IsDependentOn("Task A")
 .Does(ctx => {
 	System.Threading.Thread.Sleep(10000);
 });
