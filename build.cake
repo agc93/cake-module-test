@@ -25,25 +25,25 @@ Teardown(ctx =>
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
 
-Task("5")
+Task("Task A")
 .Does(ctx => {
 	System.Threading.Thread.Sleep(5000);
 });
 
-Task("10")
+Task("Task B")
 .IsDependentOn("5")
 .Does(ctx => {
 	System.Threading.Thread.Sleep(10000);
 });
 
-Task("2")
+Task("Task C")
 .Does(ctx => {
 	System.Threading.Thread.Sleep(2000);
 });
 
 Task("Default")
-.IsDependentOn("2")
-.IsDependentOn("10")
+.IsDependentOn("Task C")
+.IsDependentOn("Task B")
 .Does(() => {
 	var files = GetFiles("./**/*");
 	foreach(var file in files) {
