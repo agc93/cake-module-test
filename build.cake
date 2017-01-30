@@ -45,7 +45,7 @@ Task("Default")
 .IsDependentOn("2")
 .IsDependentOn("10")
 .Does(() => {
-	var files = GetFiles("./**");
+	var files = GetFiles("./**/*");
 	foreach(var file in files) {
 		Information(file.FullPath);
 	}
