@@ -45,7 +45,7 @@ Task("Default")
 .IsDependentOn("2")
 .IsDependentOn("10")
 .Does(() => {
-	Information("Hello Cake!")
+	Information("Hello Cake!");
 });
 
 RunTarget(target);
