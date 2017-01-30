@@ -33,7 +33,8 @@ Task("Task A")
 Task("Task B")
 .IsDependentOn("Task A")
 .Does(ctx => {
-	System.Threading.Thread.Sleep(10000);
+	System.Threading.Thread.Sleep(1000);
+	Error("Testing arg parsing for target: {0}", target);
 });
 
 Task("Task C")
