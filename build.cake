@@ -39,6 +39,7 @@ Task("Task B")
 Task("Task C")
 .Does(ctx => {
 	System.Threading.Thread.Sleep(2000);
+	Warning("Warning from Task C");
 });
 
 Task("Default")
