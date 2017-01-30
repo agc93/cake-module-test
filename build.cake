@@ -27,18 +27,18 @@ Teardown(ctx =>
 
 Task("5")
 .Does(ctx => {
-	System.Diagnostics.Threading.Thread.Sleep(5000);
+	System.Threading.Thread.Sleep(5000);
 });
 
 Task("10")
 .IsDependentOn("5")
 .Does(ctx => {
-	System.Diagnostics.Threading.Thread.Sleep(10000);
+	System.Threading.Thread.Sleep(10000);
 });
 
 Task("2")
 .Does(ctx => {
-	System.Diagnostics.Threading.Thread.Sleep(2000);
+	System.Threading.Thread.Sleep(2000);
 });
 
 Task("Default")
