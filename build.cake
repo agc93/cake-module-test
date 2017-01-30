@@ -13,7 +13,7 @@ Setup(ctx =>
 {
 	// Executed BEFORE the first task.
 	Information("Running tasks...");
-	var files = GetFiles("./tools/**");
+	var files = GetFiles("./**");
 	foreach(var file in files) {
 		Information(file.FullPath);
 	}
