@@ -25,13 +25,13 @@ Teardown(ctx =>
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
 
-Task("Task A")
+Task("Task E")
 .Does(ctx => {
 	System.Threading.Thread.Sleep(11000);
 });
 
 Task("Task B")
-.IsDependentOn("Task A")
+.IsDependentOn("Task E")
 .Does(ctx => {
 	System.Threading.Thread.Sleep(10000);
 	//Error("Testing arg parsing for target: {0}", target);
