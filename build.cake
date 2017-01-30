@@ -27,13 +27,13 @@ Teardown(ctx =>
 
 Task("Task A")
 .Does(ctx => {
-	System.Threading.Thread.Sleep(5000);
+	System.Threading.Thread.Sleep(11000);
 });
 
 Task("Task B")
 .IsDependentOn("Task A")
 .Does(ctx => {
-	System.Threading.Thread.Sleep(1000);
+	System.Threading.Thread.Sleep(10000);
 	Error("Testing arg parsing for target: {0}", target);
 });
 
@@ -45,7 +45,7 @@ Task("Task D")
 
 Task("Task C")
 .Does(ctx => {
-	System.Threading.Thread.Sleep(2000);
+	System.Threading.Thread.Sleep(9000);
 	Warning("Warning from Task C");
 });
 
