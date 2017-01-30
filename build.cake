@@ -37,6 +37,12 @@ Task("Task B")
 	//Error("Testing arg parsing for target: {0}", target);
 });
 
+Task("Task D")
+.WithCriteria(() => 1 == 2)
+.Does(ctx => {
+	Information("lolnope");
+});
+
 Task("Task C")
 .Does(ctx => {
 	System.Threading.Thread.Sleep(2000);
@@ -46,6 +52,7 @@ Task("Task C")
 Task("Default")
 .IsDependentOn("Task C")
 .IsDependentOn("Task B")
+.IsDependentOn("Task D")
 .Does(() => {
 	var files = GetFiles("./**/*");
 	foreach(var file in files) {
