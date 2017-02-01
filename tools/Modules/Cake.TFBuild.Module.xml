@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.TFBuild.Module</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.TFBuild.Module.TFBuildEngine">
+            <summary>
+            Represents a Cake engine for use with the TF Build engine.
+            </summary>
+        </member>
+        <member name="M:Cake.TFBuild.Module.TFBuildEngine.#ctor(Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.TFBuild.Module.TFBuildEngine"/> type.
+            </summary>
+            <param name="log">The log.</param>
+        </member>
+    </members>
+</doc>
