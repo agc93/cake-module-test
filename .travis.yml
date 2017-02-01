@@ -2,6 +2,10 @@ language: csharp
 script:
   - ./build.sh -v Diagnostic
 
+os:
+  - linux
+  - osx
+
 cache:
   directories:
     - src/packages
